@@ -7,3 +7,14 @@ function artWorkIndex(req, res, next) {
     .then(artWorks => res.json(artWorks))
     .catch(next);
 }
+
+functin artWorkShow(req, res, next) {
+  artWork
+    .findByID(req.params.id)
+    .populate('admin')
+    .exec()
+    .then((artWork) => {
+      res.json(artWork);
+    })
+    .catch(next);
+}
