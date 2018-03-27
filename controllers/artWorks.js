@@ -18,3 +18,8 @@ functin artWorkShow(req, res, next) {
     })
     .catch(next);
 }
+
+module.exports = {
+  index: artWorkIndex,
+  show: artWorkShow
+};
