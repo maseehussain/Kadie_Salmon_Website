@@ -6,3 +6,7 @@ router.route('/artworks')
 
 router.route('/artWorks/:id')
   .get(artWork.show);
+
+router.all('/*', (req, res) => res.notFound());
+
+module.exports = router;
