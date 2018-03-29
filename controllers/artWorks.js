@@ -1,7 +1,7 @@
-const artWork = require('../models/artWork');
+const ArtWork = require('../models/artWork');
 
 function artWorkIndex(req, res, next) {
-  artWork
+  ArtWork
     .find()
     .exec()
     .then(artWorks => res.json(artWorks))
@@ -9,12 +9,11 @@ function artWorkIndex(req, res, next) {
 }
 
 functin artWorkShow(req, res, next) {
-  artWork
+  ArtWork
     .findByID(req.params.id)
-    .populate('admin')
     .exec()
-    .then((artWork) => {
-      res.json(artWork);
+    .then((ArtWork) => {
+      res.json(ArtWork);
     })
     .catch(next);
 }
