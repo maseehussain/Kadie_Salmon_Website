@@ -8,5 +8,13 @@ mongoose
   .connect(dbURI, { useMongoCLient: true })
   .then(db => db.dropDatabase())
   .then(() => {
-    return
+    return ArtWork.create([
+      {
+        image: '',
+        nameOfWork: '',
+        material: '',
+        yearCreated: ''
+      },
+    ])
   })
+  .then(artworks => console.log(`${artworks.length} art work created`))
