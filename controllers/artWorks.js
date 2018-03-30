@@ -8,7 +8,7 @@ function artWorkIndex(req, res, next) {
     .catch(next);
 }
 
-functin artWorkShow(req, res, next) {
+function artWorkShow(req, res, next) {
   ArtWork
     .findByID(req.params.id)
     .exec()
