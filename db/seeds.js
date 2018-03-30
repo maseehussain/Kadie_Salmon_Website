@@ -4,7 +4,7 @@ mongoose.Promise = require('bluebird');
 const { dbURI } = require('../config/environment');
 const ArtWork = require('../models/artWork');
 
-mongoose.connect(dbURI, { useMongoCLient: true });
+mongoose.connect(dbURI, { useMongoClient: true });
 
 mongoose.connection.once('open', () => {
   mongoose.connection.db.dropDatabase();
@@ -16,9 +16,9 @@ mongoose.connection.once('open', () => {
     yearCreated: '2016'
   }];
 
+  ArtWork
+    .create(artWorksData)
+    .then(artworks => console.log(`${artworks.length} art work created`))
+    .catch(err => console.log(err))
+    .finally(() => mongoose.connection.close());
 });
-
-
-ArtWork
-  .create(artWorkData)
-  .then
