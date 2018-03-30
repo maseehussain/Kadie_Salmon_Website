@@ -19,3 +19,4 @@ mongoose
   })
   .then(artworks => console.log(`${artworks.length} art work created`))
   .catch(err => console.log(err))
+  .finally(() => mongoose.connection.close());
