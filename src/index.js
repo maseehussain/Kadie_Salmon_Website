@@ -11,7 +11,7 @@ class App extends React.Component {
       <main>
         <div className="container">
           <div className="row">
-            <h1>Test</h1>
+            <h1>Kadie Salmon</h1>
           </div>
         </div>
       </main>
