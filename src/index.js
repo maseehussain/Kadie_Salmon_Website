@@ -9,12 +9,17 @@ class App extends React.Component {
   render() {
     return (
       <main>
-        <div>
-          <div>
-
+        <div className="container">
+          <div className="row">
+            <h1>Test</h1>
           </div>
         </div>
       </main>
     );
   }
 }
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
