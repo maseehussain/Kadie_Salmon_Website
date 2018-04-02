@@ -1,4 +1,4 @@
-const path    = require('path');
+const path = require('path');
 const webpack = require('webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -16,7 +16,7 @@ const CopyWebpack = new CopyWebpackPlugin([
 const HotModuleReplcement = new webpack.HotModuleReplacementPlugin();
 
 module.exports = {
-  entry: './src/app.js',
+  entry: './src/index.js',
   output: {
     path: path.resolve('public'),
     filename: 'app.js',
@@ -30,8 +30,7 @@ module.exports = {
       { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file-loader' },
       { test: /\.(woff|woff2)$/, loader: 'url-loader?prefix=font/&limit=5000' },
       { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=application/octet-stream' },
-      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=image/svg+xml' },
-      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=image/gif' }
+      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=image/svg+xml' }
     ]
   },
   devServer: {
@@ -39,14 +38,13 @@ module.exports = {
     hot: true,
     inline: true,
     port: 8000,
-    open: false,
-    proxy: [
-      {
-        context: ['/api', '/socket', '/socket.io'],
+    open: true,
+    proxy: {
+      '/api': {
         target: 'http://localhost:4000',
         secure: false
       }
-    ]
+    }
   },
   plugins: [HotModuleReplcement, HtmlWebpack, CopyWebpack]
 };
