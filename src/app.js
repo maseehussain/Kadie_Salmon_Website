@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 import 'bootstrap-css-only';
+import 'react-bootstrap';
 
 class App extends React.Component {
 
