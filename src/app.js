@@ -14,11 +14,9 @@ class App extends React.Component {
     return (
       <main>
         <div className="container">
-          <div className="row">
-            <header>
-              <NavbarMain />
-            </header>
-          </div>
+          <header>
+            <NavbarMain />
+          </header>
         </div>
       </main>
     );
