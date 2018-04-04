@@ -18,6 +18,8 @@ import {
 import Axios from 'axios';
 
 class NavbarMain extends React.Component {
+
+  toggle = this.toggle.bind(this);
   state = {
     isOpen: false
   };
@@ -31,7 +33,7 @@ class NavbarMain extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
+          <NavbarBrand href="/">Kadie Salmon</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
