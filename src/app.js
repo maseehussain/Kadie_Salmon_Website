@@ -2,8 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 
+import NavbarMain from './components/utility/Navbar';
+
 import 'bootstrap-css-only';
 import 'react-bootstrap';
+import 'reactstrap';
 
 class App extends React.Component {
 
@@ -12,7 +15,9 @@ class App extends React.Component {
       <main>
         <div className="container">
           <div className="row">
-            <h1>Kadie Salmon</h1>
+            <header>
+              <NavbarMain />
+            </header>
           </div>
         </div>
       </main>
