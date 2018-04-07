@@ -34,25 +34,27 @@ class NavbarMain extends React.Component {
       <div>
         <Navbar color="light" light expand="md">
           <NavbarBrand href="/">Kadie Salmon</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
+                <NavLink href="">About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                <NavLink href="">CV</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  Options
+                  Works
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    Option 1
+                    2017-Current
                   </DropdownItem>
                   <DropdownItem>
-                    Option 2
+                    2013-2016
+                  </DropdownItem>
+                  <DropdownItem>
+                    2009-2012
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
@@ -60,6 +62,9 @@ class NavbarMain extends React.Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
+              <NavItem>
+                <NavLink href="">Contact</NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
