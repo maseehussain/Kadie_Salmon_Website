@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link,
-  withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 import {
   Collapse,
@@ -18,17 +17,19 @@ import {
 import Axios from 'axios';
 
 class NavbarMain extends React.Component {
+  constructor(props) {
+     super(props);
 
-  toggle = this.toggle.bind(this);
-  state = {
-    isOpen: false
-  };
-
-  toggle() {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
-  }
+     this.toggle = this.toggle.bind(this);
+     this.state = {
+       isOpen: false
+     };
+   }
+   toggle() {
+     this.setState({
+       isOpen: !this.state.isOpen
+     });
+   }
   render() {
     return (
       <div>
