@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 
-import NavbarMain from './components/utility/Navbar';
+import NavbarMain from './components/utility/NavbarMain';
 
 import 'bootstrap-css-only';
 import 'react-bootstrap';
