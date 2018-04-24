@@ -58,9 +58,6 @@ class NavbarMain extends React.Component {
                     2009-2012
                   </DropdownItem>
                   <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>
